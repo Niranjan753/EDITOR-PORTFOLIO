@@ -47,9 +47,9 @@ export default function Component() {
 
   return (
     <>
-      <div className="min-h-screen bg-black text-white p-8">
+      <div className="min-h-screen bg-black text-white p-4 sm:p-8">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl font-bold mb-4 text-center animate-pulse">
+          <h1 className="text-3xl sm:text-4xl font-bold mb-4 text-center animate-pulse">
             Hey, I'm <span className="text-white">Niranjan</span>
           </h1>
           <div 
@@ -59,7 +59,7 @@ export default function Component() {
           >
             <div className="relative">
               <h2 
-                className="text-6xl font-bold text-center opacity-0 animate-fade-in-down bg-gradient-to-r from-blue-500 to-gray-300 bg-clip-text text-transparent p-4 rounded-lg shadow-lg transform transition-all duration-300 ease-out"
+                className="text-4xl sm:text-6xl font-bold text-center opacity-0 animate-fade-in-down bg-gradient-to-r from-blue-500 to-gray-300 bg-clip-text text-transparent p-4 rounded-lg shadow-lg transform transition-all duration-300 ease-out"
                 style={{
                   transform: `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`,
                   transformStyle: 'preserve-3d',
@@ -67,7 +67,7 @@ export default function Component() {
               >
                 Professional <br/>Video Editor
               </h2>
-              <p className="text-lg text-center mt-4 mb-6 max-w-2xl mx-auto leading-relaxed">
+              <p className="text-base sm:text-lg text-center mt-4 mb-6 max-w-2xl mx-auto leading-relaxed">
                 Looking for a video editor who can bring your vision to life? With years of experience and a passion for storytelling, I'll transform your raw footage into captivating content that engages your audience and elevates your brand. From corporate videos to social media clips, I deliver polished results on time and within budget. Let's collaborate to create something extraordinary!
               </p>
               <div 
@@ -101,12 +101,12 @@ export default function Component() {
         }
       `}</style>
       <div className="bg-black text-white p-2 max-w-4xl mx-auto">
-        <h1 className="text-4xl font-bold mb-6 text-center bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">My Works</h1>
+        <h1 className="text-3xl sm:text-4xl font-bold mb-6 text-center bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">My Works</h1>
         
-        <div className="grid grid-cols-3 gap-2">
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
           {videos.map((video) => (
             <div key={video.id} className="bg-black rounded-lg overflow-hidden shadow-sm flex flex-col w-full max-w-[180px] mx-auto transition-all duration-300 hover:scale-105 hover:shadow-lg">
-              <h3 className="text-[10px] font-semibold p-1 truncate">{video.title}</h3>
+              <h3 className="text-[10px] sm:text-xs font-semibold p-1 truncate">{video.title}</h3>
               <div className="relative flex-grow">
                 <div className="aspect-[9/16] w-full">
                   {currentVideo && currentVideo.id === video.id ? (
@@ -143,16 +143,16 @@ export default function Component() {
           ))}
         </div>
       </div>
-      <div className="bg-black text-white p-8 max-w-4xl mx-auto">
-        <h2 className="text-4xl font-bold mb-6 text-center bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">Contact Me</h2>
+      <div className="bg-black text-white p-4 sm:p-8 max-w-4xl mx-auto">
+        <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-center bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">Contact Me</h2>
         <div className="flex flex-col items-center space-y-4">
           <div className="flex items-center space-x-4">
             <Mail size={24} />
-            <a href="mailto:niranjanr753@gmail.com" className="text-xl hover:text-blue-400 transition-colors duration-200">niranjanr753@gmail.com</a>
+            <a href="mailto:niranjanr753@gmail.com" className="text-lg sm:text-xl hover:text-blue-400 transition-colors duration-200">niranjanr753@gmail.com</a>
           </div>
           <div className="flex items-center space-x-4">
             <Instagram size={24} />
-            <a href="https://www.instagram.com/todef4ult" target="_blank" rel="noopener noreferrer" className="text-xl hover:text-blue-400 transition-colors duration-200">@todef4ult</a>
+            <a href="https://www.instagram.com/todef4ult" target="_blank" rel="noopener noreferrer" className="text-lg sm:text-xl hover:text-blue-400 transition-colors duration-200">@todef4ult</a>
           </div>
         </div>
       </div>
