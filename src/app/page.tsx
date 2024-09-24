@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from 'react'
 import { Play, Pause, Mail, Instagram } from 'lucide-react'
+import analytics from "/public/videos/analytics.png"
 
 const videos = [
   { id: 1, title: 'Video 1', src: '/videos/video1.mp4' },
@@ -70,6 +71,7 @@ export default function Component() {
               <p className="text-base sm:text-lg text-center mt-4 mb-6 max-w-2xl mx-auto leading-relaxed">
                 Looking for a video editor who can bring your vision to life? With years of experience and a passion for storytelling, I'll transform your raw footage into captivating content that engages your audience and elevates your brand. From corporate videos to social media clips, I deliver polished results on time and within budget. Let's collaborate to create something extraordinary!
               </p>
+
               <div 
                 className="absolute inset-0 pointer-events-none"
                 style={{
@@ -101,7 +103,8 @@ export default function Component() {
         }
       `}</style>
       <div className="bg-black text-white p-2 max-w-4xl mx-auto">
-        <h1 className="text-3xl sm:text-4xl font-bold mb-6 text-center bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">My Works</h1>
+        <img src={analytics.src} alt="Analytics" style={{ display: 'block', marginBottom: '1rem' }} />
+        <h1 className="text-3xl sm:text-4xl font-bold mb-6 text-center bg-gradient-to-r from-black via-white to-black bg-clip-text text-transparent">My Works</h1>
         
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
           {videos.map((video) => (
